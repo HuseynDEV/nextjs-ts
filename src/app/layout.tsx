@@ -7,8 +7,11 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Lama Dev E-Commerce Application",
+  title: " E-Commerce Application",
   description: "A complete e-commerce application with Next.js and Wix",
+  icons: {
+    icon: "/star.png"
+  }
 };
 
 export default function RootLayout({
@@ -19,10 +22,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar/>
-        {children}
-        <Footer/>
-        </body>
+        <Navbar />
+        <main className="py-10">
+          {children}
+
+        </main>
+        <Footer />
+      </body>
     </html>
   );
 }
