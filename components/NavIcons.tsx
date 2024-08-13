@@ -7,13 +7,13 @@ import { useEffect, useState } from "react";
 import CartModal from "./CartModal";
 
 const NavIcons = () => {
-  const [isProfileOpen, setIsProfileOpen] = useState(false);
-  const [isCartOpen, setIsCartOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isProfileOpen, setIsProfileOpen] = useState<boolean>(false);
+  const [isCartOpen, setIsCartOpen] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const router = useRouter();
 
-const isLoggedIn=false
+const isLoggedIn=true
   const handleProfile = () => {
     if (!isLoggedIn) {
       router.push("/login");
